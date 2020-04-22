@@ -57,12 +57,13 @@ $edit_files = true;
 
 // Default timezone for date() and time()
 // Doc - http://php.net/manual/en/timezones.php
-$default_timezone = 'Etc/UTC'; // UTC
+#$default_timezone = 'Etc/UTC'; // UTC
+$default_timezone = getenv('TZ');
 
 // Root path for file manager
 // use absolute path of directory i.e: '/var/www/folder' or $_SERVER['DOCUMENT_ROOT'].'/folder'
 #$root_path = "/web_data";
-$root_path = '/web_data/public_html' ;
+$root_path = getenv('FILEMANAGER_ROOT_PATH');
 
 // Root url for links in file manager.Relative to $http_host. Variants: '', 'path/to/subfolder'
 // Will not working if $root_path will be outside of server document root
